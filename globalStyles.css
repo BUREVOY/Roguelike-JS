@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+h1 {
+  font-family: "Playfair Display";
+  font-size: 30px;
+}
+.field-box {
+  border: 2px solid #d0d0d0;
+  float: left;
+}
+.field {
+  position: relative;
+  /* background-image: url(images/tile-.png); */
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  width: 1024px;
+  height: 640px;
+}
+.field .tile {
+  background-image: url(images/tile-.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 12;
+}
+.field .tileW {
+  background-image: url(images/tile-W.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 11;
+}
+.field .tileE {
+  background-image: url(images/tile-E.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 13;
+}
+.field .tileP {
+  background-image: url(images/tile-P.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 13;
+}
+.field .tileHP {
+  background-image: url(images/tile-HP.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 13;
+}
+.field .tileSW {
+  background-image: url(images/tile-SW.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 13;
+}
+
+.inventory-box {
+  border: 2px solid #d0d0d0;
+  float: left;
+}
+.inventory {
+  position: relative;
+  width: 300;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+}
+
+.inventory .tileSW {
+  background-image: url(images/tile-SW.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 13;
+}
+.cl {
+  clear: both;
+  display: block;
+}
+.health-bar-container {
+  position: relative;
+  height: 4px;
+  background-color: #ddd;
+}
+
+.health-bar {
+  height: 100%;
+  background-color: #b30000;
+  transition: width 0.3s;
+}
+
+.tileP .health-bar-container .health-bar {
+  background-color: #15b300;
+}
+
+.enemy-tile {
+  position: relative;
+  background-image: url(images/tile-E.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
